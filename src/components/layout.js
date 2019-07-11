@@ -25,7 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <main>{children}</main>
+      <main>
+        <Header />
+        {children}
+      </main>
     </>
   );
 };
