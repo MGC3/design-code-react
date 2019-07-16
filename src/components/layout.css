@@ -15,13 +15,13 @@ a {
   font-weight: 600;
 }
 
-.HeroVideoLink {
-  font-size: 17px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 9px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
+.TopNavButton {
+  padding: 8px 20px;
+  font-size: 20px;
+  background: #56ccf2;
+  border: none; /* get rid of button defaults */
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none; /* get rid of outline/glow on element when clicking */
+  cursor: pointer; /* turns cursor into pointer on hover */
 }
