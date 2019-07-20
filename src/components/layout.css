@@ -14,14 +14,3 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
-
-.TopNavButton {
-  padding: 8px 20px;
-  font-size: 20px;
-  background: #56ccf2;
-  border: none; /* get rid of button defaults */
-  font-weight: 700;
-  border-radius: 10px;
-  outline: none; /* get rid of outline/glow on element when clicking */
-  cursor: pointer; /* turns cursor into pointer on hover */
-}

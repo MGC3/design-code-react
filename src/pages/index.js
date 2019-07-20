@@ -8,6 +8,7 @@ import Image from "../components/image";
 import SEO from "../components/seo";
 
 import Section from "../components/Section";
+import Card from "../components/Card";
 
 const IndexPage = () => (
   <Layout>
@@ -25,6 +26,31 @@ const IndexPage = () => (
           <VideoLink to="/page-2">Watch the video</VideoLink>
         </HeroGroup>
       </Hero>
+      <div className="Cards">
+        <CardsTag>11 courses, more coming</CardsTag>
+        <CardGroup>
+          <Card
+            title="React for Designers"
+            text="12 sections"
+            image={require("../images/wallpaper.jpg")}
+          ></Card>
+          <Card
+            title="Design System"
+            text="10 sections"
+            image={require("../images/wallpaper2.jpg")}
+          ></Card>
+          <Card
+            title="Sound Design"
+            text="5 sections"
+            image={require("../images/wallpaper3.jpg")}
+          ></Card>
+          <Card
+            title="ARKit 2"
+            text="10 sections"
+            image={require("../images/wallpaper4.jpg")}
+          ></Card>
+        </CardGroup>
+      </div>
     </div>
 
     {/* // TODO in Section 8
@@ -95,6 +121,33 @@ const VideoLink = styled(Link)`
   &:hover {
     background: white;
     color: black;
+  }
+`;
+
+const CardsTag = styled.h2`
+  margin: 50px 20px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+const CardGroup = styled.div`
+  margin: 50px 40px 100px;
+  display: grid;
+  /* build the grid */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+
+  @media (max-width: 1060px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 export default IndexPage;

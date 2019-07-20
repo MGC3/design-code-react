@@ -11,9 +11,7 @@ const Header = ({ siteTitle }) => (
         <TopNavLink to="/courses">Courses</TopNavLink>
         <TopNavLink to="/downloads">Downloads</TopNavLink>
         <TopNavLink to="/workshops">Workshops</TopNavLink>
-        <TopNavLink to="/buy">
-          <button className="TopNavButton">Buy</button>
-        </TopNavLink>
+        <TopNavButton to="/buy">Sign Up</TopNavButton>
       </TopNavGroup>
     </TopNav>
   </div>
@@ -48,7 +46,28 @@ const TopNavGroup = styled.div`
 const TopNavLink = styled(Link)`
   color: white;
   font-weight: 700;
-  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  &:hover {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    color: black;
+    transform: translateY(-3px);
+  }
+`;
+
+const TopNavButton = styled(Link)`
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #56ccf2;
+  border: none; /* get rid of button defaults */
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none; /* get rid of outline/glow on element when clicking */
+  cursor: pointer; /* turns cursor into pointer on hover */
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
     background: white;
